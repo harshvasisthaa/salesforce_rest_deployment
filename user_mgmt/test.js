@@ -1,7 +1,7 @@
 const createUser = require('./handler/create');
 const loginUser = require('./handler/login');
 
-/*createUser.create(['harsh@rawat.com','maapaa1995'])
+/*createUser.create(['harsh@rawat.com','asdasdasd'])
 .then((result) => {
     console.log("Success", result);
 })
@@ -17,7 +17,7 @@ loginUser.validate('saK4oxyOfwBTO4aUCUlHuNVEJkINfF9ZJhtbrG2F6nQ=', 'harsh@rawat.
     console.log("Error", error);
 })
 /*/
-loginUser.login('harsh@rawat.com','maapaa1995')
+loginUser.login('harsh@rawat.com','asdasdasd')
 .then((result) => {
     console.log("Success", result);
 })

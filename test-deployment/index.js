@@ -4,14 +4,14 @@ const request = require(`${__dirname}/request`);
 request.execute('http://localhost/login', 
                 {"Content-Type" : 'application/json'}, 
                 'POST', 
-                '{"username":"harsh@rawat.com","password":"maapaa1995"}')
+                '{"username":"harsh@rawat.com","password":"test"}')
 .then((response)=>{
     console.log(response.response.headers['set-cookie']);
 	let requestBody = {
 		branch : "dummy_branch",
 		consumerKey: "3MVG9fe4g9fhX0E6kcopvWInnuBJxpZc1Niht_PenbEv4hgc3_.nYiM3dPSbqk7lq3JC2i0iecHSLHHjiBYkh",
-		instanceURL: "https://login.salesforce.com",
-		username: "harsh.rawat@absyz.com.deplyment",
+		instanceURL: "https://test.salesforce.com",
+		username: "harsh@rawat.com",
 		testLevel: "1",
 		testClasses: "TestClass1,TestClass2"
 	}
