@@ -1,0 +1,9 @@
+{
+	"error_msg": {
+		"USERNAME_OR_PASSWORD_MISSING": "Enter username and password both."
+	},
+	"redirect_urls": {
+		"login_page_with_error": "/login?error=1&msg="
+	},
+	"response_type" : "API"
+}

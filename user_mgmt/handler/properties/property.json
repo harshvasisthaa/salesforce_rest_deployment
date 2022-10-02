@@ -1,0 +1,27 @@
+{
+	"db" : "database/users.db",
+	"validate_user_query" : "SELECT * FROM Users WHERE username = ?",
+	"validate_user_login" : "SELECT * FROM Users WHERE username = ? AND password = ?",
+	"validate_user_session" : "SELECT * FROM session_user_view WHERE session_id = ? AND username = ?",
+	"error_msg" : {
+		"invalid_username" : "The username is incorrect. Please use email format for username.",
+		"username_exists" : "The username already exists.",
+		"db_error" : "Unable to process the request, please contact admin.",
+		"insert_fail" : "Unable to create the user. Please enter correct values or connect to admin.",
+		"login_fail" : "Please enter correct username and password.",
+		"session_expired" : "The session has been expired please login again."
+	},
+	"insert" : {
+		"user":{
+			"table" : "users",
+			"columns" : ["username","password"]	
+		},
+		"session":{
+			"table" : "sessions",
+			"columns" : ["session_id","timestamp","user_id"]
+		}
+	},
+	"update_session" : {
+		"stmnt" : "Update sessions set timestamp = ?  WHERE username = ? AND session_id = ?"
+	}
+}
